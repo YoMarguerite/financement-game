@@ -1,26 +1,12 @@
 {
-  "name": "voicerback_netlify",
+  "name": "financementback_netlify",
   "version": "0.0.1",
-  "description": "Back of voicer, deploy on netlify.",
+  "description": "Back of financement game, deploy on netlify.",
   "main": "functions/server.js",
   "scripts": {
     "start": "nodemon server-local.js",
     "build": "netlify-lambda build express"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neverendingqs/netlify-express.git"
-  },
-  "keywords": [
-    "netlify",
-    "express.js"
-  ],
-  "author": "YoMarguerite",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/neverendingqs/netlify-express/issues"
-  },
-  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
   "dependencies": {
     "express-swagger-generator": "^1.1.17"
   },
