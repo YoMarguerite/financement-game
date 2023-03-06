@@ -13,6 +13,11 @@ expressSwagger(options);
 app.use(bodyParser.json({limit: '200mb'}));
 app.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "localhost"),
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"),
+  next(),
+});
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -25,6 +30,7 @@ app.use((req, res, next) => {
       res.send();
   });
 });
+
 
 // app.use((req, res, next) => {
 //   if(req.headers.origin !== 'https://voicer-front.netlify.app') {
